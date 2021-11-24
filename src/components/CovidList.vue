@@ -1,0 +1,78 @@
+<template>
+  <div>
+    <ul>
+      <li>
+        <div class="countryList__list-item heading">
+          <div class="countryList__list-item-number">№</div>
+          <div class="countryList__list-item-country">Country</div>
+          <div class="countryList__list-item-total">Total Confirmed</div>
+        </div>
+      </li>
+      <CovidListItem
+          v-for="(country,i) of summary "
+          v-bind:country="country"
+          v-bind:index="i"
+          v-bind:key="country.id"
+      />
+    </ul>
+  </div>
+</template>
+
+<script>
+import CovidListItem from './CovidListItem'
+
+export default {
+  props: ['summary'],
+  methods: {
+    log() {
+      console.log((this.summary))
+    }
+  },
+  components: {CovidListItem}
+}
+</script>
+
+<style lang="scss">
+li {
+  list-style: none;
+}
+.countryList {
+  width: 100%;
+  &__list {
+    list-style: none;
+    padding-left: 5px;
+    &-item {
+      display: flex;
+      margin: 10px;
+      border-radius: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+      justify-content: space-between;
+
+      &-number {
+        flex: 1 0;
+        padding: 20px;
+        border-right: 1px solid #B2B2B2;
+      }
+      &-country{
+        flex: 5 0;
+        padding: 20px;
+        border-right: 1px solid #B2B2B2 ;
+
+      }
+      &-total{
+        flex: 3 0;
+        max-width: 210px;
+        padding: 20px;
+
+      }
+    }
+  }
+}
+.heading{
+  background-color: #7c7ce0;
+  & div{
+    border-right: 1px solid white;
+  }
+}
+
+</style>
