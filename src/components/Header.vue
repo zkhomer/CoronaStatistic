@@ -58,7 +58,7 @@ export default {
         border:none;
         height: 30px;
         width: 200px;
-        padding: 5px;
+        padding: 5px 5px 5px 15px;
         border-radius: 20px;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
         outline: none;

@@ -7,30 +7,32 @@
         v-bind:find="find"
         v-bind:summary="summary"
     />
-    <Modal/>
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header.vue"
 import CovidList from "@/components/CovidList.vue"
-import Modal from "@/components/Modal.vue"
 
 export default {
   name: 'App',
   components: {
-    Header, CovidList, Modal
+    Header, CovidList,
   },
   data() {
     return {
       summary: [],
-      find: ""
+      find: "",
+      oneCountry: {}
     }
   },
   methods: {
     findHandler(inputValue) {
       this.find = inputValue
-    }
+    },
+    toggleModal() {
+      this.isModal = !this.isModal
+    },
   },
 
   async mounted() {

@@ -1,5 +1,10 @@
 <template>
   <div>
+    <Modal
+        @modalShow="isModal"
+        v-if="isModalState"
+        v-bind:countryDetailsObj="countryDetailsObj"
+    />
     <ul class="countryList">
       <li>
         <div class="countryList__list-item heading">
@@ -13,6 +18,9 @@
           v-bind:country="country"
           v-bind:index="i"
           v-bind:key="country.id"
+          @countryDetails="countryDetails"
+          @modalOpen="isModal"
+
       />
     </ul>
   </div>
@@ -20,17 +28,25 @@
 
 <script>
 import CovidListItem from './CovidListItem'
+import Modal from "@/components/Modal";
 
 export default {
   data() {
     return {
-      test: [...this.summary],
+      isModalState: false,
+      countryDetailsObj: {}
     }
   },
   props: ['summary', 'find'],
   methods: {
-    log() {
-      // console.log(this.findHandler)
+    // log() {
+    //   console.log(this.country)
+    // },
+    isModal() {
+      this.isModalState = !this.isModalState
+    },
+    countryDetails(details) {
+      this.countryDetailsObj = details;
     }
   },
   computed: {
@@ -40,7 +56,7 @@ export default {
       })
     },
   },
-  components: {CovidListItem}
+  components: {CovidListItem, Modal}
 }
 </script>
 

@@ -1,6 +1,6 @@
 <template>
-  <li>
-    <div class="countryList__list-item">
+  <li v-on:click="$emit('countryDetails', country)">
+    <div @click="$emit('modalOpen')" class="countryList__list-item">
       <div class="countryList__list-item-number">{{ index + 1 }}</div>
       <div class="countryList__list-item-country">{{ country.Country }}</div>
       <div class="countryList__list-item-total">{{ country.TotalConfirmed }}</div>
@@ -18,10 +18,10 @@ export default {
     index: Number
   },
   methods: {
-    testLog() {
-      console.log(this.country)
-    }
-  }
+    // testLog() {
+    //   console.log(this.country)
+    // }
+  },
 }
 </script>
 <!--////////////////////////////////////////////////////////-->
