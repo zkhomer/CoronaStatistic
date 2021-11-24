@@ -6,7 +6,7 @@
       </div>
       <div class="header__wrapper__search">
         <input
-            @change="$emit('findHandler', inputValue)"
+            v-on:keyup="$emit('findHandler', inputValue)"
             v-model="inputValue"
             type="text"
             placeholder="Search..."
