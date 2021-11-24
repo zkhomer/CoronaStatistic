@@ -39,9 +39,6 @@ export default {
   },
   props: ['summary', 'find'],
   methods: {
-    // log() {
-    //   console.log(this.country)
-    // },
     isModal() {
       this.isModalState = !this.isModalState
     },

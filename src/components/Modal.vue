@@ -13,7 +13,7 @@
           Total Deaths
         </div>
         <div class="total-deaths">
-         {{ countryDetailsObj.TotalDeaths }}
+          {{ countryDetailsObj.TotalDeaths }}
         </div>
       </li>
       <li class="total">
@@ -21,7 +21,7 @@
           Total Recovered
         </div>
         <div class="total-recovered">
-         {{ countryDetailsObj.TotalRecovered }}
+          {{ countryDetailsObj.TotalRecovered }}
         </div>
       </li>
       <button
@@ -38,23 +38,20 @@
 export default {
   data() {
     return {
-      modalShow:false,
+      modalShow: false,
     }
   },
   props: ['countryDetailsObj'],
 
-  methods: {
-    log() {
-      console.log(console.log("work"))
-    }
-  },
+  methods: {},
 }
 </script>
 
 <style scoped lang="scss">
-*{
+* {
   box-sizing: border-box;
 }
+
 .modal {
   position: fixed;
   top: 0;
@@ -79,7 +76,7 @@ export default {
     border-radius: 20px;
   }
 
-  &__btn{
+  &__btn {
     display: block;
     font-size: 24px;
     color: white;
@@ -88,10 +85,11 @@ export default {
     border-radius: 20px;
     width: 170px;
     height: 50px;
-    border:none;
+    border: none;
     cursor: pointer;
     transition: background-color 0.4s;
-    &:hover{
+
+    &:hover {
       background-color: #2152f3;
     }
 
@@ -103,8 +101,7 @@ export default {
     max-width: 400px;
     margin: 0 auto;
 
-
-    & div{
+    & div {
       font-size: 24px;
       color: rgba(102, 102, 102, 1);
       margin-bottom: 50px;
