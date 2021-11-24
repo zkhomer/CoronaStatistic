@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul>
+    <ul class="countryList">
       <li>
         <div class="countryList__list-item heading">
           <div class="countryList__list-item-number">№</div>
@@ -50,7 +50,8 @@ li {
 }
 
 .countryList {
-  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 
   &__list {
     list-style: none;
@@ -87,7 +88,7 @@ li {
 }
 
 .heading {
-  background-color: #7c7ce0;
+  background-color: #2196F3;
 
   & div {
     border-right: 1px solid white;

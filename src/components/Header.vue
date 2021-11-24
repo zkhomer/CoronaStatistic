@@ -5,7 +5,12 @@
         <img v-bind:src="imgUrl" alt="Covid statistic logo">
       </div>
       <div class="header__wrapper__search">
-        <input @change="$emit('findHandler', inputValue)" v-model="inputValue" type="text" placeholder="Search country">
+        <input
+            @change="$emit('findHandler', inputValue)"
+            v-model="inputValue"
+            type="text"
+            placeholder="Search..."
+        >
       </div>
     </div>
   </div>
@@ -37,7 +42,10 @@ export default {
   &__wrapper {
     display: flex;
     justify-content: space-between;
-
+      @media (max-width: 530px) {
+        flex-direction: column;
+        align-items: center;
+      }
     &__img img {
       width: 300px;
     }
@@ -47,8 +55,13 @@ export default {
       align-items: center;
 
       & input {
+        border:none;
         height: 30px;
         width: 200px;
+        padding: 5px;
+        border-radius: 20px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+        outline: none;
       }
     }
   }

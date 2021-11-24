@@ -26,7 +26,11 @@ export default {
 </script>
 <!--////////////////////////////////////////////////////////-->
 <style scoped lang="scss">
-li {
-
+.countryList__list-item{
+  transition: background-color 0.3s;
+  cursor: pointer;
+  &:hover{
+    background-color: #2196F3;
+  }
 }
 </style>
