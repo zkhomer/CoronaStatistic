@@ -1,7 +1,7 @@
 <template>
   <li>
     <div class="countryList__list-item">
-      <div class="countryList__list-item-number">{{ index + 1}}</div>
+      <div class="countryList__list-item-number">{{ index + 1 }}</div>
       <div class="countryList__list-item-country">{{ country.Country }}</div>
       <div class="countryList__list-item-total">{{ country.TotalConfirmed }}</div>
     </div>
@@ -18,7 +18,7 @@ export default {
     index: Number
   },
   methods: {
-    testLog(){
+    testLog() {
       console.log(this.country)
     }
   }
@@ -26,7 +26,7 @@ export default {
 </script>
 <!--////////////////////////////////////////////////////////-->
 <style scoped lang="scss">
-li{
+li {
 
 }
 </style>

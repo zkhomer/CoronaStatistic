@@ -5,7 +5,7 @@
         <img v-bind:src="imgUrl" alt="Covid statistic logo">
       </div>
       <div class="header__wrapper__search">
-        <input type="text" placeholder="Search country">
+        <input @change="$emit('findHandler', inputValue)" v-model="inputValue" type="text" placeholder="Search country">
       </div>
     </div>
   </div>
@@ -15,7 +15,13 @@
 export default {
   data() {
     return {
-      imgUrl: "https://osr.statisticsauthority.gov.uk/wp-content/uploads/2020/04/Covid-19.png"
+      imgUrl: "https://osr.statisticsauthority.gov.uk/wp-content/uploads/2020/04/Covid-19.png",
+      inputValue: ''
+    }
+  },
+  methods: {
+    getName() {
+      console.log(this.inputValue)
     }
   }
 }
