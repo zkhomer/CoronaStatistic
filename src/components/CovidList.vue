@@ -65,6 +65,8 @@ li {
 .countryList {
   max-width: 900px;
   margin: 0 auto;
+  padding-left: 0;
+
 
   &__list {
     list-style: none;

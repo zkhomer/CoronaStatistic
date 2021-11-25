@@ -74,6 +74,7 @@ export default {
     max-width: 600px;
     height: 450px;
     border-radius: 20px;
+    padding:0 20px;
   }
 
   &__btn {
