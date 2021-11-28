@@ -1,5 +1,5 @@
 # covid-table2
-
+[DEMO_LINK](https://zkhomer.github.io/CoronaStatistic/) 
 ## Project setup
 ```
 npm install
